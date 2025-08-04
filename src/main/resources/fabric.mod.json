@@ -1,0 +1,48 @@
+{
+	"schemaVersion": 1,
+	"id": "get-me-out",
+	"version": "${version}",
+	"name": "Get Me Out!",
+	"description": "This mods allows you to easily quit any game/server you are in with a dedicated quit hotkey!",
+	"authors": [
+		"MaskedMatters"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/get-me-out/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"main": [
+			{
+				"value": "com.maskedmatters.getmeout.GetMeOut",
+				"adapter": "kotlin"
+			}
+		],
+		"client": [
+			{
+				"value": "com.maskedmatters.getmeout.GetMeOutClient",
+				"adapter": "kotlin"
+			}
+		]
+	},
+	"mixins": [
+		"get-me-out.mixins.json",
+		{
+			"config": "get-me-out.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.21.8",
+		"java": ">=21",
+		"fabric-api": "*",
+		"fabric-language-kotlin": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
