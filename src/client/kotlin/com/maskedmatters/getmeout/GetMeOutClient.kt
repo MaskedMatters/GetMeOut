@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper
 import net.minecraft.client.MinecraftClient
 import net.minecraft.client.gui.screen.TitleScreen
 import net.minecraft.client.option.KeyBinding
+import net.minecraft.client.toast.SystemToast
 import net.minecraft.client.util.InputUtil
 import net.minecraft.text.Text
 import org.lwjgl.glfw.GLFW
@@ -31,9 +32,14 @@ object GetMeOutClient : ClientModInitializer {
 
 			if (quitKeyBinding.wasPressed() && client.world != null) {
 				// Pass the screen directly to disconnect, so it sets it internally.
-				client.world?.disconnect(Text.literal("Disconnected"))
-				client.disconnectWithSavingScreen()
-				client.setScreen(TitleScreen())
+				client.world?.disconnect()
+				client.toastManager.add(
+					SystemToast.create(client, SystemToast.Type.NARRATOR_TOGGLE, Text.of("Saving Game"), Text.of("Don't close Minecraft until text closes."))
+				);
+				client.disconnect(TitleScreen())
+				client.toastManager.add(
+					SystemToast.create(client, SystemToast.Type.NARRATOR_TOGGLE, Text.of("Game Saved"), Text.of("You can safely close Minecraft."))
+				);
 			}
 		}
 	}
