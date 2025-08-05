@@ -8,8 +8,7 @@ This is the Quick Disconnect hotkey set to period within the Controls screen:
 We now also have toast notifications for when it's safe to leave the game (in Minecraft versions that don't have the saving game screen):
 ![A Minecraft toast notification that tells the user the game is saved and is safe to exit](https://cdn.modrinth.com/data/fGrd17SV/images/be8846717b3120838487c5b158162ba6b07efd65.png)
 
-We have a quick video on my YouTube channel using the mod to quickly leave a singleplayer game in 1.21.8 and 1.20.5:
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/wysy2W1xgXg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+This is a YouTube video displaying the use of our mod in different versions: https://youtu.be/wysy2W1xgXg
 
 > [!NOTE]
 > We are switching to use only Java, instead of Kotlin, to lessen the amount of dependencies and work towards keeping our mod as simple as possible. 
