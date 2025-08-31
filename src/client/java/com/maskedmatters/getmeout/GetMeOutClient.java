@@ -22,7 +22,7 @@ public class GetMeOutClient implements ClientModInitializer {
 				new KeyBinding(
 						"key.getmeout.quit",
 						InputUtil.Type.KEYSYM,
-						GLFW.GLFW_KEY_UNKNOWN,
+						GLFW.GLFW_KEY_F9,
 						"category.getmeout"
 				)
 		);
