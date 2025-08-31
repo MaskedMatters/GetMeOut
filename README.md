@@ -1,6 +1,6 @@
 This mod allows you to easily quit any game/server you are in with a dedicated quit hotkey!
 
-We just released v1.0.0 on August 4th, 2025, it requires Fabric API and Fabric Language Kotlin to run in 1.21.8. We have plans to expand and keep updating as new Minecraft versions are released. We also plan to backtrack from 1.21.8 all the way to 1.11 for now.
+We just released v1.0.0 on August 4th, 2025, it requires Fabric API and Fabric Language Kotlin to run in 1.21.8. We have plans to expand and keep updating as new Minecraft versions are released. We also plan to backtrack from 1.21.8 all the way to 1.14 for now.
 
 This is the Quick Disconnect hotkey set to period within the Controls screen:
 ![The Quick Disconnect hotkey set to Period within the Controls screen](https://cdn.modrinth.com/data/fGrd17SV/images/161ba0f3a9f268e71c4aafa8d18316b817ac29f7.png)
