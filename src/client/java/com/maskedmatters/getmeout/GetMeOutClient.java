@@ -10,6 +10,7 @@ import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.util.InputUtil;
 
 import net.minecraft.text.Text;
+import net.minecraft.util.Identifier;
 import org.lwjgl.glfw.GLFW;
 
 public class GetMeOutClient implements ClientModInitializer {
@@ -17,12 +18,14 @@ public class GetMeOutClient implements ClientModInitializer {
 	public void onInitializeClient() {
 		// This entrypoint is suitable for setting up client-specific logic, such as rendering.
 
+        KeyBinding.Category GETMEOUT_CATEGORY = KeyBinding.Category.create(Identifier.of("getmeout"));
+
 		KeyBinding quitKeybind = KeyBindingHelper.registerKeyBinding(
 				new KeyBinding(
 						"key.getmeout.quit",
 						InputUtil.Type.KEYSYM,
 						GLFW.GLFW_KEY_F9,
-						"category.getmeout"
+						GETMEOUT_CATEGORY
 				)
 		);
 
